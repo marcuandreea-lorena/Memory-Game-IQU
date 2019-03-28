@@ -27,13 +27,6 @@ class Card {
 		
 	}
 
-	// unflip() {
-  //   this.isFlipped = false;
-	// //	this.cardHtml.classList.toggle("card");
-
-	// 	//const unflipEvent = new CustomEvent('cardUnflipped', {detail: this });
-	// 	//document.dispatchEvent(unflipEvent);
-  // }
 }
 
 class Game {
@@ -45,11 +38,6 @@ class Game {
 		this.createCards();
 		this.flippedCards = [];
 		this.counter = 0;
-		//this.firstCard ;
-		//this.secondCard;
-		//this.checkForMatch();
-		//this.disableCards();
-	//	this.unflipCards();
 
     
     document.addEventListener('cardFlipped', this.handleCardFlip.bind(this));
@@ -99,49 +87,11 @@ class Game {
 			else {
 				console.log("we are not the same");
 				this.unflipCards();
-				//	unmatched();
 			}
 		} 
 		//return this.flippedCards;
 	}
 	
-	// flippedCards(){
-	// 	this.classList.add('flip');
-
-	// 	if(isFlipped)
-	// 		firstCard= this;
-	// 		return;
-
-	// 	secondCard = this;
-	// 	isFlipped = false;
-
-	// 	checkForMatch();
-	// }
-
-	// flipCard() {
-  //   this.classList.add('flip');
-
-  //   if (!hasFlippedCard) {
-  //     hasFlippedCard = true;
-  //     firstCard = this;
-	// 	return;
-	// }
-	
-	// secondCard = this;
-	// hasFlippedCard = false;
-	
-	// checkForMatch();
-	// }
-	
-	// checkForMatch() {
-	// if (this.firstCard === this.secondCard) {
-	// 	console.log("We are the same!");
-	// 	//disableCards();
-	// 	return;
-	// }
-	// console.log("We are not the same!");
-	// unflipCards();
-	// }
 	
 	disableCards() {
 		let i = this.flippedCards.length;
@@ -187,68 +137,7 @@ class Game {
 	// 			this.shuffleCards();}
 	location.reload();
 
-}
-//  cards.forEach(card => card.addEventListener('click', flipCard));
-  
-
-  // displayCard(){
-    // this.classList.toggle("open");
-    // this.classList.toggle("show");
-    // this.classList.toggle("disabled");
-// }
-    
-	// cardFlipped() {
-		// flippedCards.push(this);
-		// var len = flippedCards.length;
-		// if(len === 2){
-			// if(flippedCards[0].type === flippedCards[1].type){
-				// matched();
-			// } else {
-				// unmatched();
-			// }
-		// }
-	// }
-
-	// matched(){
-		// flippedCards[0].classList.add("match", "disabled");
-		// flippedCards[1].classList.add("match", "disabled");
-		// flippedCards[0].classList.remove("show", "open", "no-event");
-		// flippedCards[1].classList.remove("show", "open", "no-event");
-		// flippedCards = [];
-	// }
-  
-	// unmatched(){
-		// flippedCards[0].classList.add("unmatched");
-		// flippedCards[1].classList.add("unmatched");
-		// disable();
-		// setTimeout(function(){
-			// flippedCards[0].classList.remove("show", "open", "no-event","unmatched");
-			// flippedCards[1].classList.remove("show", "open", "no-event","unmatched");
-			// enable();
-			// flippedCards = [];
-		// },1100);
-	// }
-
-	// disable(){
-		// Array.prototype.filter.call(cards, function(card){
-			// card.classList.add('disabled');
-		// });
-	// }
-
-	// enable(){
-		// Array.prototype.filter.call(cards, function(card){
-			// card.classList.remove('disabled');
-			// for(var i = 0; i < matchedCard.length; i++){
-				// matchedCard[i].classList.add("disabled");
-			// }
-		// });
-	// }
-  
-//   moveCounter(){
-//     moves++;
-//     counter.innerHTML = moves;
-   
-//         }
+}  
 
 	
 }
